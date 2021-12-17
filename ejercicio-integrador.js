@@ -67,14 +67,8 @@ const productsWithStock = arrayProducts => {
 
 // 8. Imprimir en consola la sumatoria del stock de todos los productos.
 
-const stockOfProducts = arrayProducts => {
-    let initialStock = 0
+const sumStockTotal = (arrProducts) => arrProducts.reduce((acc, obj) => { return acc + obj.quantity; }, 0);
 
-    
-    
-    // console.log(arrayProducts.forEach(product => initialStock + product.quantity))
+// 9. Imprimir los productos con un precio mayor a un importe determinado.
 
-}
-
-
-stockOfProducts(products);
+const printProductsByPrice = (arrProducts, price) => arrProducts.filter((product) => product.price > price );
